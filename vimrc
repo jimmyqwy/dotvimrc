@@ -65,6 +65,7 @@ Plugin 'ervandew/supertab'
 Plugin 'jimmyqwy/jvimrc'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'itchyny/lightline.vim'
+Plugin 'junegunn/vim-easy-align'
 
 call vundle#end()            " required
 
@@ -115,6 +116,10 @@ vmap <Leader>p "+p
 vmap <Leader>P "+P
 nmap <Leader><Leader> V
 
+" Alignment
+vmap <Enter> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+
 " file head and tail
 " nnoremap <BS><BS> gg
 nnoremap <CR><CR> G
@@ -125,6 +130,10 @@ noremap gV `[v`]
 " Custom split opening / closing behaviour
 map <C-N> :vsp .<CR>
 map <C-C> :q<CR>
+
+" Home End
+nnoremap <Leader>h 0
+nnoremap <Leader>l $
 
 "" Others ======================================
 " If you prefer the Omni-Completion tip window to close when a selection is made, these lines close it on movement in insert mode or when leaving insert mode
